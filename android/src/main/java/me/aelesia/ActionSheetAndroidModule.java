@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -87,7 +88,7 @@ public class ActionSheetAndroidModule extends ReactContextBaseJavaModule {
                     if (title != null || message != null) {
                         View border = new View(reactContext);
                         border.setBackgroundColor(Color.parseColor("#DDDDDD"));
-                        border.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1));
+                        border.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, 1));
                         listView.addHeaderView(border);
                     }
                     ActionSheetListAdapter adapter = new ActionSheetListAdapter(reactContext, strList, destructiveIndex, tintColor, position -> {
